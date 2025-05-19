@@ -1,0 +1,10 @@
+rules:
+  - id: detect-eval
+    patterns:
+      - pattern: eval($X)
+    message: "Avoid using eval(); it can lead to code injection vulnerabilities."
+    languages: [python]
+    severity: ERROR
+    metadata:
+      category: security
+      technology: python
